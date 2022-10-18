@@ -3,16 +3,10 @@
 public class GameAccount
 {
     public string UserName;
-    public int CurrentRating;
+    public int CurrentRating {get; private set;}
     public int GameCount;
     public List<Info> History = new List<Info>();
 
-    public GameAccount(string UserName, int CurrentRating, int GameCount)
-    {
-        this.UserName = UserName;
-        this.CurrentRating = CurrentRating;
-        this.GameCount = GameCount;
-    }
     public GameAccount(string UserName)
     {
         this.UserName = UserName;
